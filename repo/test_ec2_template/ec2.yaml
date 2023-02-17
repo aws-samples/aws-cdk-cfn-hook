@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Testinig Cloudformation Hook
+
+Resources:
+  WebAppInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0036b4598ccd42565  ## Change it according to the region
+      InstanceType: t2.small

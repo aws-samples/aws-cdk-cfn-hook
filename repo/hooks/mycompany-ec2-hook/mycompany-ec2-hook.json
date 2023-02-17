@@ -1,0 +1,27 @@
+{
+    "typeName": "MyCompany::EC2::Hook",
+    "description": "Verifies Ec2 Instance type before create and update",
+    "sourceUrl": "https://mycorp.com/my-repo.git",
+    "documentationUrl": "https://mycorp.com/documentation",
+    "typeConfiguration": {
+        "properties": {
+            "instancetype": {
+                "description": "Type of EC2 instance allowed",
+                "default": "t2.micro,t2.small",
+                "type": "string"
+
+            }
+        },
+        "required": [],
+        "additionalProperties": false
+    },
+    "handlers": {
+        "preCreate": {
+            "targetNames": [
+                "AWS::EC2::Instance"
+            ],
+            "permissions": []
+        }
+    },
+    "additionalProperties": false
+}

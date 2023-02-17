@@ -1,0 +1,7 @@
+{
+    "company_name": "myfirstcompany",
+    "service_name": "SNS",
+    "hook_name": "HOOK",
+    "failure_mode": "WARN",
+    "target_stack": "ALL"
+}

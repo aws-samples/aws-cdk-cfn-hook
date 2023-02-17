@@ -1,0 +1,16 @@
+.venv/*
+venv/
+./cdk.out/**
+.DS_Store
+repo/.DS_Store
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+hook_cdk/__pycache__/
+*.py[cod]
+*$py.class
+./cdk.out
+cdk.out
+cdk.out/**
+.vscode

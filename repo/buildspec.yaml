@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - pip3 install -r requirements.txt
+
+  build:
+    commands:
+      - chmod +x build_hook.sh
+      - echo "Building hooks..."
+      - ./build_hook.sh
+artifacts:
+  files:
+    - '**/*'
+  name: builds/$CODEBUILD_BUILD_NUMBER/my-artifacts
