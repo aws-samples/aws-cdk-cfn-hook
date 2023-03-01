@@ -1,4 +1,4 @@
-# Build and Deploy CloudFromation hook using CI/CD Pipeline
+# Build and Deploy CloudFormation Hooks using A CI/CD Pipeline
 
 <!-- vscode-markdown-toc -->
 # Table of Contents
@@ -31,7 +31,7 @@ This solution leverages AWS CDK (Python) to deploy the following components:
 
 In this pattern, we  created one CloudFormation hook (`MyCompany::EC2::Hook`) that is triggered before any EC2 instance is created via CloudFormation stack. This hook will check for the instance type and will only allow the process to continue if it matches with `instancetype` defined in the hook properties in the hook scheme file (`repo/hooks/mycompany-ec2-hook/mycompany-ec2-hook.json`). In this example, allowed instance type is defined as  `t2.micro,t2.small`
 
-The hook handler (`repo/hooks/mycompany-ec2-hook/src/mycompany_ec2_hook/handlers.py`) implementes the  logic that compares  the ec2 instance type provided by the CloudFormation with allowed list and sends success/failure msg.
+The hook handler (`repo/hooks/mycompany-ec2-hook/src/mycompany_ec2_hook/handlers.py`) implements the logic that compares  the ec2 instance type provided by the CloudFormation with allowed list and sends success/failure msg.
 
 # <a name='arch'></a>Target Architecture
 
@@ -260,7 +260,7 @@ aws cloudformation delete-stack --stack-name CloudFormationManagedUploadInfrastr
 
 # <a name='conclusion'></a>Conclusion
 
-This patterns demonstrate how to create, build, and deploy CFN hooks to enforce proactive compliance using a CI/CD pipeline. This solution enables developers to check for compliance even before provisioning the resource. 
+This pattern demonstrates how to create, build, and deploy CFN hooks to enforce proactive compliance using a CI/CD pipeline. This solution enables developers to check for compliance even before provisioning the resource. 
 
 ## Security
 
