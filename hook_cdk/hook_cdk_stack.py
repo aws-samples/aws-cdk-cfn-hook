@@ -111,7 +111,8 @@ class HookCdkStack(Stack):
                 "s3:PutBucketAcl",
                 "s3:PutBucketPolicy",
                 "s3:PutBucketVersioning",
-                "s3:GetObject"],
+                "s3:GetObject",
+                "s3:PutBucketPublicAccessBlock"],
             resources=["arn:aws:s3:::cloudformationmanageduploadinfra*"],
             effect=iam.Effect.ALLOW)
             )
