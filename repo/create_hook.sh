@@ -15,7 +15,7 @@ if [ -f ${config_file} ]; then
   else
     mkdir ${hook_base_folder_name}/${lower_case_folder_name}
     cd ${hook_base_folder_name}/${lower_case_folder_name}
-    echo yes | cfn init --type-name "$company_name::$service_name::$hook_name" --artifact-type "HOOK" python37
+    echo yes | cfn init --type-name "$company_name::$service_name::$hook_name" --artifact-type "HOOK" python39
     jq -n --arg failure_mode ${failure_mode} --arg target_stack ${target_stack} '{"failure_mode":"\($failure_mode)","target_stack":"\($target_stack)"}' > parameter.json
   fi
 else
